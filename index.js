@@ -22,7 +22,7 @@ app.post("/echo", function (req, res) {
 app.post("/getFirstName", function (req, res) {
     console.log(req.body.result.parameters.firstName);
 
-    var returnText="allright,i get your firstname is " + req.body.firstName + ". Now please tell me your last name?";
+    var returnText="allright,i get your firstname is " + req.body.result.parameters.firstName + ". Now please tell me your last name?";
      return res.json({
         speech: returnText,
         displayText: returnText,
